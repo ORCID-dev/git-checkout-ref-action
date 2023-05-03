@@ -78,9 +78,9 @@ if [[ "$ref" = 'default' ]];then
   # When checking out the repository that
   # triggered a workflow, this defaults to the reference or SHA for that event.
   # Otherwise, uses the default branch.
-  echo "output ref: ''"
+  echo "output ref: "
 
-  echo "ref=''" >> "$GITHUB_OUTPUT" 2>/dev/null
+  echo "ref=" >> "$GITHUB_OUTPUT" 2>/dev/null
 elif [[ "$ref" = 'default_branch' ]];then
   # NOTE: this will cause checkouts to contain any commits that a github
   #       action pipeline has committed. So if a build relies on some previous formatting actions
